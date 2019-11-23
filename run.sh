@@ -43,4 +43,6 @@ docker run --rm -it -e DISPLAY=$DISPLAY \
     -v $phpstorm:/home/andrei/.PhpStorm2019.2 \
     -v $java:/home/andrei/.java \
     -v $projects:/home/andrei/PhpstormProjects/ \
+    --env _JAVA_AWT_WM_NONREPARENTING=1 \
+    --env AWT_TOOLKIT=MToolkit \
     phpstorm-docker:latest
